@@ -4,6 +4,8 @@ import Home from "../Pages/Home/Home/Home";
 import Media from "../Pages/Media/Media";
 import Message from "../Pages/Message/Message";
 import Profile from "../Pages/Profile/Profile";
+import Login from "../Pages/Login/Login";
+import SignUp from "../Pages/SignUp/SignUp";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +27,14 @@ const router = createBrowserRouter([
       {
         path: "/profile",
         element: <Profile></Profile>,
+      },
+      {
+        path: "/login",
+        element: <Login></Login>,
+      },
+      {
+        path: "/signup",
+        element: <SignUp></SignUp>,
       },
     ],
   },

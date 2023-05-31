@@ -4,7 +4,6 @@ import {
   FaMapMarkerAlt,
   FaEnvelope,
   FaMobileAlt,
-  FaTruckMonster,
   FaFacebookF,
   FaLinkedinIn,
   FaTwitter,
