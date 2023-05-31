@@ -69,7 +69,10 @@ const Navbar = () => {
                 {menuItems}
               </ul>
             </div>
-            <Link to="/" className="btn btn-ghost normal-case text-xl">
+            <Link
+              to="/"
+              className="btn btn-ghost text-info normal-case text-xl"
+            >
               Talk Space
             </Link>
           </div>

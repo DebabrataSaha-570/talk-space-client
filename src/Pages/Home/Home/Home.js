@@ -1,9 +1,12 @@
 import React from "react";
+import AddPost from "../AddPost/AddPost";
+import TopPosts from "../TopPosts/TopPosts";
 
 const Home = () => {
   return (
     <div>
-      <h3>This is home component</h3>
+      <AddPost></AddPost>
+      <TopPosts></TopPosts>
     </div>
   );
 };

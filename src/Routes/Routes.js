@@ -6,6 +6,7 @@ import Message from "../Pages/Message/Message";
 import Profile from "../Pages/Profile/Profile";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -14,11 +15,20 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>,
+        element: (
+          <PrivateRoute>
+            {" "}
+            <Home></Home>{" "}
+          </PrivateRoute>
+        ),
       },
       {
         path: "/media",
-        element: <Media></Media>,
+        element: (
+          <PrivateRoute>
+            <Media></Media>{" "}
+          </PrivateRoute>
+        ),
       },
       {
         path: "/message",
@@ -26,7 +36,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/profile",
-        element: <Profile></Profile>,
+        element: (
+          <PrivateRoute>
+            {" "}
+            <Profile></Profile>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/login",

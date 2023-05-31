@@ -13,7 +13,7 @@ const Footer = () => {
     <section className="bg-base-300 py-6">
       <footer className="footer max-w-7xl mx-auto p-14  text-[--footerText]">
         <div>
-          <Link to="/" className="text-3xl font-semibold text-[--footerText]">
+          <Link to="/" className="text-3xl font-semibold text-info">
             {" "}
             Talk Space
           </Link>
