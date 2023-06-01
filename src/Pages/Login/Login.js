@@ -40,11 +40,28 @@ const Login = () => {
       .then((res) => {
         const user = res.user;
         console.log(user);
+        saveUserToDatabase(user.displayName, user.email, "PUT");
         navigate("/");
       })
       .catch((error) => {
         console.log(error.message);
         setLoginError(error.message);
+      });
+  };
+
+  const saveUserToDatabase = (name, email, method) => {
+    const user = { name, email };
+    fetch("http://localhost:5005/users", {
+      method: method,
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        navigate("/");
+        console.log(data);
       });
   };
 

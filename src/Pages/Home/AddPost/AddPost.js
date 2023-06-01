@@ -61,24 +61,27 @@ const AddPost = () => {
       });
   };
   return (
-    <section className="max-w-3xl mx-auto my-5 p-5 bg-base-300">
-      <form onSubmit={handleAddPost}>
-        <textarea
-          placeholder="What's on your mind?"
-          onBlur={(e) => setPostDetail(e.target.value)}
-          className="textarea textarea-bordered textarea-lg w-full "
-        ></textarea>
-        <input
-          type="file"
-          accept="image/*"
-          onChange={(e) => setImage(e.target.files[0])}
-          className="file-input file-input-bordered w-full "
-        />
-        <div className="flex flex-row-reverse">
-          <input type="submit" value="Submit" className="btn   my-2 " />
-        </div>
-      </form>
-    </section>
+    <>
+      <h3 className="max-w-3xl mx-auto text-2xl my-3">Make a Post</h3>
+      <section className="max-w-3xl mx-auto my-5 p-5 bg-base-300">
+        <form onSubmit={handleAddPost}>
+          <textarea
+            placeholder="What's on your mind?"
+            onBlur={(e) => setPostDetail(e.target.value)}
+            className="textarea textarea-bordered textarea-lg w-full "
+          ></textarea>
+          <input
+            type="file"
+            accept="image/*"
+            onChange={(e) => setImage(e.target.files[0])}
+            className="file-input file-input-bordered w-full "
+          />
+          <div className="flex flex-row-reverse">
+            <input type="submit" value="Submit" className="btn   my-2 " />
+          </div>
+        </form>
+      </section>
+    </>
   );
 };
 
