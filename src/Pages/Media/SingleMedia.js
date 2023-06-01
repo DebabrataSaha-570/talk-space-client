@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const SingleMedia = (props) => {
-  const { postDetail, image, userName, userPhoto } = props.post;
+  const { postDetail, image, userName, userPhoto, _id } = props.post;
   return (
     <div className="card  bg-base-200 shadow-xl my-5">
       <div className="card-body">
@@ -18,6 +19,12 @@ const SingleMedia = (props) => {
       <figure>
         <img src={image} alt="post_image" />
       </figure>
+      <div className="card-actions justify-between py-3 px-4">
+        <button className="btn btn-link ">Like</button>
+        <Link to={`/postDetail/${_id}`} className="btn btn-link">
+          See Detail
+        </Link>
+      </div>
     </div>
   );
 };

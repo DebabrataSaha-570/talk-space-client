@@ -7,6 +7,7 @@ import Profile from "../Pages/Profile/Profile";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import PrivateRoute from "./PrivateRoute";
+import PostDetail from "../Pages/PostDetail/PostDetail";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,15 @@ const router = createBrowserRouter([
           <PrivateRoute>
             {" "}
             <Profile></Profile>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/postDetail/:id",
+        element: (
+          <PrivateRoute>
+            {" "}
+            <PostDetail></PostDetail>
           </PrivateRoute>
         ),
       },
